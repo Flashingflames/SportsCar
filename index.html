@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
 <title>Sports Cars</title>
-<body align = "center" style="background-color:#f2f2f2; cursor: wait; padding:5px;">
+<body align = "center" style="background-color:#f2f2f2; cursor: wait; padding:5px; text-align:center;">
   <h1 style="text-align:center;">Sports Cars</h1>
-  <p style="font-family:Comic Sans MS; color:#990000;">
+  <p style="font-family:Comic Sans MS; color:#990000; border: 0.5px solid black" id="info" onclick="test()">
     This is from <a href="https://en.wikipedia.org/wiki/Sports_car">wikipedia</a>:<br> A sports car, or sportscar, is a small, usually two-seater, two-door automobile designed for spirited performance and nimble handling.[2][3] The term "sports car" was used in The Times, London in 1919.[4] According to USA's Merriam-Webster dictionary, USA's first known use of the term was in 1928.[2] Sports cars started to become popular during the 1920s.[5]
     Sports cars may be spartan or luxurious, but high maneuverability and light weight are requisite.[6] Sports cars are usually aerodynamically shaped (since the 1950s), and have a low center of gravity compared to standard models. Steering and suspension are typically designed for precise control at high speeds.[7] Traditionally sports cars were open roadsters, but closed coupés also started to become popular during the 1930s, and the distinction between a sports car and a grand tourer is not absolute.[8][9]
   </p>
 
-  <img src="http://auto-otaku.com/wp-content/uploads/2016/04/2011-Koenigsegg-Agera-R.jpg" width="500" height="270" style="cursor: crosshair; float:center;"/>
+  <img src="http://auto-otaku.com/wp-content/uploads/2016/04/2011-Koenigsegg-Agera-R.jpg" style="cursor: crosshair; float:center; width:25%; height:15%"/>
 
   <div>
     <span>Choose a car color: </span> <input type="color">
+    <input type="button" value="TEST">
   </div>
+
+  <table style = "float: center; text-align:center;">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Top Speed</th>
+    </tr>
+
+    <tr>
+      <td>Lamborghini Veneno</td>
+      <td>$4.5 million</td>
+      <td>221 mph</td>
+    </tr>
+  </table>
+
+  <canvas width="750" height="500" id="myCan" style="border:0.5px solid black"></canvas>
+  <script>
+    var a = 1
+    var test = function(){
+      alert("THIS IS A TEST!")
+      // console.log("herro")
+      var infotag = document.getElementById("info");
+
+      var acc = 0;
+      for (var i = 0; i <= 100000000; i++){
+        acc += i;
+      }
+      infotag.innerHTML = acc;
+    }
+
+    var c = document.getElementById("myCan");
+  </script>
 </body>
 </html>
